@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 #sudo apt-get remove --purge empathy evolution libreoffice-* rhythmbox aislerion gnome-sudoku ibus ibus-* 
@@ -8,7 +9,7 @@ sudo apt-get -y dist-upgrade
 sudo apt-get -y autoremove
 
 # install necessary things
-sudo apt-get install -y steam git curl zsh wget build-essential vim fcitx transmission mysql-client-5.7 mysql-server-5.7 mysql-workbench openjdk-8-jdk openjdk-8-jre
+sudo apt-get install -y steam git curl zsh wget guake build-essential vim fcitx transmission mysql-client-5.7 mysql-server-5.7 mysql-workbench openjdk-8-jdk openjdk-8-jre
 
 # install bumblebee
 sudo apt-get install -y bumblebee bumblebee-nvidia primus linux-headers-generic
@@ -30,3 +31,6 @@ git clone git@github.com:tevenfeng/boringStuffs.git
 cd boringStuffs
 sudo dpkg -i netease-cloud-music_1.0.0-2_amd64_ubuntu16.04.deb
 sudo dpkg -i sogoupinyin_2.1.0.0086_amd64.deb
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
