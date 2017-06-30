@@ -8,7 +8,7 @@ sudo apt-get -y dist-upgrade
 sudo apt-get -y autoremove
 
 # install necessary things
-sudo apt-get install -y steam git curl zsh wget build-essentials vim fcitx transmission mysql-client-5.7 mysql-server-5.7 mysql-workbench openjdk-8-jdk openjdk-8-jre
+sudo apt-get install -y steam git curl zsh wget build-essential vim fcitx transmission mysql-client-5.7 mysql-server-5.7 mysql-workbench openjdk-8-jdk openjdk-8-jre
 
 # install bumblebee
 sudo apt-get install -y bumblebee bumblebee-nvidia primus linux-headers-generic
