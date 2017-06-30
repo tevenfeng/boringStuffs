@@ -22,9 +22,14 @@ sudo add-apt-repository ppa:snwh/pulp -y
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+# add shadowsocks-qt5 repository
+sudo add-apt-repository -y ppa:hzwhuang/ss-qt5
+# add pantheon-files repository
+sudo add-apt-repository -y ppa:elementary-os/stable
 
+sudo rm /usr/share/applications/Nautilus.desktop
 sudo apt-get update
-sudo apt-get install -y google-chrome-stable paper-icon-theme paper-gtk-theme paper-cursor-theme code
+sudo apt-get install -y google-chrome-stable paper-icon-theme paper-gtk-theme paper-cursor-theme code shadowsocks-qt5 pantheon-files
 
 cd ~
 git clone git@github.com:tevenfeng/boringStuffs.git
