@@ -29,7 +29,7 @@ sudo add-apt-repository -y ppa:elementary-os/stable
 
 sudo rm /usr/share/applications/Nautilus.desktop
 sudo apt-get update
-sudo apt-get install -y google-chrome-stable paper-icon-theme paper-gtk-theme paper-cursor-theme code shadowsocks-qt5 pantheon-files
+sudo apt-get install -y --allow-unauthenticated google-chrome-stable paper-icon-theme paper-gtk-theme paper-cursor-theme code shadowsocks-qt5 pantheon-files
 
 cd ~
 git clone git@github.com:tevenfeng/boringStuffs.git
