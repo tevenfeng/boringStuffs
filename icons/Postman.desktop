@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Postman
+Exec=/home/tevenfeng/Apps/Postman/Postman
+Terminal=false
+Icon=/home/tevenfeng/Apps/Postman/Postman.png
+Type=Application
+Categories=Network;Development;

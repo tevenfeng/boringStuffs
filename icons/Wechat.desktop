@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Wechat
+Exec=/home/tevenfeng/Apps/Wechat/electronic-wechat
+Terminal=false
+Icon=/home/tevenfeng/Apps/Wechat/Wechat.png
+Type=Application
+Categories=Network;
