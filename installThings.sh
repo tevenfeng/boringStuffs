@@ -3,13 +3,18 @@
 
 sudo apt-get remove --purge empathy evolution libreoffice-* rhythmbox aisleriot gnome-sudoku ibus ibus-* 
 
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+
 # upgrade
 sudo apt-get update
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoremove
 
+sudo apt-get install curl wget;
+
 # install necessary things
-sudo apt-get install -y steam git curl zsh wget guake build-essential vim fcitx transmission mysql-client-5.7 mysql-server-5.7 mysql-workbench openjdk-8-jdk openjdk-8-jre php7.0 php7.0-mysql php7.0-curl php7.0-mbstring php7.0-json php7.0-fpm php7.0-xml php7.0-zip
+sudo apt-get install -y steam git zsh guake build-essential vim fcitx transmission mysql-client-5.7 mysql-server-5.7 mysql-workbench openjdk-8-jdk openjdk-8-jre php7.0 php7.0-mysql php7.0-curl php7.0-mbstring php7.0-json php7.0-fpm php7.0-xml php7.0-zip
 
 # install bumblebee
 sudo apt-get install -y bumblebee bumblebee-nvidia primus linux-headers-generic
