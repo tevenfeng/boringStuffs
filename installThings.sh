@@ -3,9 +3,6 @@
 
 sudo apt-get remove --purge empathy evolution libreoffice-* rhythmbox aisleriot gnome-sudoku ibus ibus-* gnome-mahjongg gnome-mines cheese
 
-sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
-sudo sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
-
 # upgrade
 sudo apt-get update
 sudo apt-get -y dist-upgrade
@@ -36,11 +33,11 @@ sudo rm /usr/share/applications/Nautilus.desktop
 sudo apt-get update
 sudo apt-get install -y --allow-unauthenticated google-chrome-stable paper-icon-theme paper-gtk-theme paper-cursor-theme code shadowsocks-qt5 pantheon-files
 
-cd ~
-git clone git@github.com:tevenfeng/boringStuffs.git
-cd boringStuffs
-sudo dpkg -i netease-cloud-music_1.0.0-2_amd64_ubuntu16.04.deb
-sudo dpkg -i sogoupinyin_2.1.0.0086_amd64.deb
+# cd ~
+# git clone git@github.com:tevenfeng/boringStuffs.git
+# cd boringStuffs
+# sudo dpkg -i netease-cloud-music_1.0.0-2_amd64_ubuntu16.04.deb
+# sudo dpkg -i sogoupinyin_2.1.0.0086_amd64.deb
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
