@@ -1,6 +1,7 @@
 
 #!/bin/bash
 
+# remove unuseful stuffs
 sudo apt-get remove --purge empathy evolution libreoffice-* rhythmbox aisleriot gnome-sudoku ibus ibus-* gnome-mahjongg gnome-mines cheese
 
 # upgrade
@@ -8,30 +9,39 @@ sudo apt-get update
 sudo apt-get -y dist-upgrade
 sudo apt-get -y autoremove
 
-sudo apt-get install curl wget;
-
-# install necessary things
-sudo apt-get install -y steam git zsh guake build-essential vim fcitx transmission mysql-client-5.7 mysql-server-5.7 mysql-workbench openjdk-8-jdk openjdk-8-jre php7.0 php7.0-mysql php7.0-curl php7.0-mbstring php7.0-json php7.0-fpm php7.0-xml php7.0-zip
-
 # install bumblebee
+# OPTIONAL for desktops
+# RECOMMENDED for laptops
 sudo apt-get install -y bumblebee bumblebee-nvidia primus linux-headers-generic
+
+# install necessary things for basic developement
+sudo apt-get -y install curl wget git build-essential vim fcitx zsh guake;
+
+# install mysql, jdk, php
+sudo apt-get install -y mysql-client-5.7 mysql-server-5.7 mysql-workbench openjdk-8-jdk openjdk-8-jre php7.0 php7.0-mysql php7.0-curl php7.0-mbstring php7.0-json php7.0-fpm php7.0-xml php7.0-zip
+
 # add google-chrome repository
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+
 # add paper-gtk-theme repository
 sudo add-apt-repository ppa:snwh/pulp -y
+
 # add vscode repository
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+
 # add shadowsocks-qt5 repository
 sudo add-apt-repository -y ppa:hzwhuang/ss-qt5
+
 # add pantheon-files repository
 sudo add-apt-repository -y ppa:elementary-os/stable
 
-sudo rm /usr/share/applications/Nautilus.desktop
 sudo apt-get update
-sudo apt-get install -y --allow-unauthenticated google-chrome-stable paper-icon-theme paper-gtk-theme paper-cursor-theme code shadowsocks-qt5 pantheon-files
+sudo apt-get install -y --allow-unauthenticated google-chrome-stable code
+sudo apt-get install -y paper-icon-theme paper-gtk-theme paper-cursor-theme shadowsocks-qt5 pantheon-files
+sudo rm /usr/share/applications/Nautilus.desktop
 
 # cd ~
 # git clone git@github.com:tevenfeng/boringStuffs.git
