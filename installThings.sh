@@ -12,13 +12,13 @@ sudo apt-get -y autoremove
 # install bumblebee
 # OPTIONAL for desktops
 # RECOMMENDED for laptops
-sudo apt-get install -y bumblebee bumblebee-nvidia primus linux-headers-generic
+# sudo apt-get install -y bumblebee bumblebee-nvidia primus linux-headers-generic
 
 # install necessary things for basic developement
 sudo apt-get -y install curl wget git build-essential vim fcitx zsh guake;
 
 # install mysql, jdk, php
-sudo apt-get install -y mysql-client-5.7 mysql-server-5.7 mysql-workbench openjdk-8-jdk openjdk-8-jre php7.0 php7.0-mysql php7.0-curl php7.0-mbstring php7.0-json php7.0-fpm php7.0-xml php7.0-zip
+# sudo apt-get install -y mysql-client-5.7 mysql-server-5.7 mysql-workbench openjdk-8-jdk openjdk-8-jre php7.0 php7.0-mysql php7.0-curl php7.0-mbstring php7.0-json php7.0-fpm php7.0-xml php7.0-zip
 
 # add google-chrome repository
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -35,12 +35,9 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 # add shadowsocks-qt5 repository
 sudo add-apt-repository -y ppa:hzwhuang/ss-qt5
 
-# add pantheon-files repository
-sudo add-apt-repository -y ppa:elementary-os/stable
-
 sudo apt-get update
 sudo apt-get install -y --allow-unauthenticated google-chrome-stable code
-sudo apt-get install -y paper-icon-theme paper-gtk-theme paper-cursor-theme shadowsocks-qt5 pantheon-files
+sudo apt-get install -y paper-icon-theme paper-gtk-theme paper-cursor-theme shadowsocks-qt5
 sudo rm /usr/share/applications/Nautilus.desktop
 
 # cd ~
