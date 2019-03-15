@@ -24,9 +24,6 @@ sudo apt-get -y install curl wget git build-essential vim fcitx zsh guake;
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
-# add paper-gtk-theme repository
-sudo add-apt-repository ppa:snwh/pulp -y
-
 # add vscode repository
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
@@ -37,8 +34,7 @@ sudo add-apt-repository -y ppa:hzwhuang/ss-qt5
 
 sudo apt-get update
 sudo apt-get install -y --allow-unauthenticated google-chrome-stable code
-sudo apt-get install -y paper-icon-theme paper-gtk-theme paper-cursor-theme shadowsocks-qt5
-sudo rm /usr/share/applications/Nautilus.desktop
+sudo apt-get install -y shadowsocks-qt5
 
 # cd ~
 # git clone git@github.com:tevenfeng/boringStuffs.git
